@@ -3879,33 +3879,33 @@ int32_t lsm6dsv32x_write_reg(const stmdev_ctx_t *ctx, uint8_t reg,
                              uint8_t *data,
                              uint16_t len);
 
-float_t lsm6dsv32x_from_sflp_to_mg(int16_t lsb);
-float_t lsm6dsv32x_from_fs4_to_mg(int16_t lsb);
-float_t lsm6dsv32x_from_fs8_to_mg(int16_t lsb);
-float_t lsm6dsv32x_from_fs16_to_mg(int16_t lsb);
-float_t lsm6dsv32x_from_fs32_to_mg(int16_t lsb);
+float lsm6dsv32x_from_sflp_to_mg(int16_t lsb);
+float lsm6dsv32x_from_fs4_to_mg(int16_t lsb);
+float lsm6dsv32x_from_fs8_to_mg(int16_t lsb);
+float lsm6dsv32x_from_fs16_to_mg(int16_t lsb);
+float lsm6dsv32x_from_fs32_to_mg(int16_t lsb);
 
-float_t lsm6dsv32x_from_fs125_to_mdps(int16_t lsb);
-float_t lsm6dsv32x_from_fs500_to_mdps(int16_t lsb);
-float_t lsm6dsv32x_from_fs250_to_mdps(int16_t lsb);
-float_t lsm6dsv32x_from_fs1000_to_mdps(int16_t lsb);
-float_t lsm6dsv32x_from_fs2000_to_mdps(int16_t lsb);
-float_t lsm6dsv32x_from_fs4000_to_mdps(int16_t lsb);
+float lsm6dsv32x_from_fs125_to_mdps(int16_t lsb);
+float lsm6dsv32x_from_fs500_to_mdps(int16_t lsb);
+float lsm6dsv32x_from_fs250_to_mdps(int16_t lsb);
+float lsm6dsv32x_from_fs1000_to_mdps(int16_t lsb);
+float lsm6dsv32x_from_fs2000_to_mdps(int16_t lsb);
+float lsm6dsv32x_from_fs4000_to_mdps(int16_t lsb);
 
-float_t lsm6dsv32x_from_lsb_to_celsius(int16_t lsb);
+float lsm6dsv32x_from_lsb_to_celsius(int16_t lsb);
 
-float_t lsm6dsv32x_from_lsb_to_nsec(uint32_t lsb);
+float lsm6dsv32x_from_lsb_to_nsec(uint32_t lsb);
 
-float_t lsm6dsv32x_from_lsb_to_mv(int16_t lsb);
+float lsm6dsv32x_from_lsb_to_mv(int16_t lsb);
 
 int32_t lsm6dsv32x_xl_offset_on_out_set(const stmdev_ctx_t *ctx, uint8_t val);
 int32_t lsm6dsv32x_xl_offset_on_out_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
 typedef struct
 {
-  float_t z_mg;
-  float_t y_mg;
-  float_t x_mg;
+  float z_mg;
+  float y_mg;
+  float x_mg;
 } lsm6dsv32x_xl_offset_mg_t;
 int32_t lsm6dsv32x_xl_offset_mg_set(const stmdev_ctx_t *ctx,
                                     lsm6dsv32x_xl_offset_mg_t val);
@@ -5184,9 +5184,9 @@ int32_t lsm6dsv32x_sflp_game_rotation_get(const stmdev_ctx_t *ctx, uint8_t *val)
 
 typedef struct
 {
-  float_t gbias_x; /* dps */
-  float_t gbias_y; /* dps */
-  float_t gbias_z; /* dps */
+  float gbias_x; /* dps */
+  float gbias_y; /* dps */
+  float gbias_z; /* dps */
 } lsm6dsv32x_sflp_gbias_t;
 int32_t lsm6dsv32x_sflp_game_gbias_set(const stmdev_ctx_t *ctx,
                                        lsm6dsv32x_sflp_gbias_t *val);
