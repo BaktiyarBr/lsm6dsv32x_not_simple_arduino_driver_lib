@@ -34,7 +34,6 @@ uint8_t tx_buffer[1000];
 lsm6dsv32x_sflp_gbias_t gbias;
 lsm6dsv32x_fifo_status_t fifo_status;
 
-
 void setup() {
   // Initialize I2C
   Serial.begin(115200);
@@ -105,9 +104,7 @@ void setup() {
   gbias.gbias_y = 0.0f;
   gbias.gbias_z = 0.0f;
   lsm6dsv32x_sflp_game_gbias_set(&dev_ctx, &gbias);
-
-
-      
+  
 }
 
 void loop() {
